@@ -1,5 +1,5 @@
 import "./Gallery.css";
-import white_arrow from "../../assets/white-arrow.png";
+// import white_arrow from "../../assets/white-arrow.png";
 import Carousel from "react-gallery-carousel";
 import "react-gallery-carousel/dist/index.css";
 
@@ -18,10 +18,12 @@ function Gallery() {
 
     return (
         <div className="galleryContainer">
-            <Carousel
-                images={imageList}
-                style={{ width: "100%", height: "100%", maxHeight: 500 }}
-            />
+            <div className="gallery">
+                <Carousel
+                    images={imageList}
+                    style={{ width: "100%", height: "100%", maxHeight: 500 }}
+                />
+            </div>
         </div>
     );
 }

@@ -25,7 +25,9 @@ const Navbar = () => {
     return (
         <nav className={`container ${sticky ? "dark-nav" : "clear-nav"}`}>
             <div className="logo-container">
-                <img src={logo} alt="" className="logo" />
+                <Link to="hero" smooth={true} offset={0} duration={500}>
+                    <img src={logo} alt="" className="logo" />
+                </Link>
             </div>
 
             <div className="menu-container">
@@ -35,7 +37,7 @@ const Navbar = () => {
                             Home
                         </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link
                             to="about"
                             smooth={true}
@@ -44,7 +46,7 @@ const Navbar = () => {
                         >
                             About us
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link
                             to="services"
@@ -65,7 +67,7 @@ const Navbar = () => {
                             Gallery
                         </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link
                             to="testimonials"
                             smooth={true}
@@ -74,8 +76,7 @@ const Navbar = () => {
                         >
                             Testimonials
                         </Link>
-                    </li>
-
+                    </li> */}
                     <li>
                         <div className="nav-contact">
                             <Link

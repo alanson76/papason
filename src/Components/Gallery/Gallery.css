@@ -4,6 +4,11 @@
     text-align: center;
 }
 
+.galleryImg {
+    max-width: 900px;
+    max-height: 500px;
+}
+
 /* media query */
 @media (max-width: 800px) {
     .galleryContainer {
