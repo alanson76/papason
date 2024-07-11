@@ -11,6 +11,9 @@
     display: inline-block;
     margin-left: 20px;
 }
+.footer ul li button {
+    font-size: small;
+}
 
 /* media query  */
 @media (max-width: 600px) {

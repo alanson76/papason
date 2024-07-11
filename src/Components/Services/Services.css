@@ -50,7 +50,7 @@
 /* media query */
 
 @media (max-width: 800px) {
-    .service {
+    .services {
         flex-direction: column;
     }
     .service-left {
@@ -60,5 +60,8 @@
     }
     .service-right {
         flex-basis: 100%;
+    }
+    .service-img {
+        margin-top: 0;
     }
 }

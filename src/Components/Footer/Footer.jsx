@@ -1,7 +1,6 @@
-import { Link } from "react-scroll";
 import "./Footer.css";
 
-const Footer = ({ setTermsOfUseState }) => {
+const Footer = ({ setTermsOfUseState, setPrivacyState }) => {
     return (
         <div className="footer">
             <p>
@@ -14,10 +13,17 @@ const Footer = ({ setTermsOfUseState }) => {
                         className="btn"
                         onClick={() => setTermsOfUseState(true)}
                     >
-                        Terms of Use
+                        Terms and Conditions
                     </button>
                 </li>
-                <li>Privacy Policy</li>
+                <li>
+                    <button
+                        className="btn"
+                        onClick={() => setPrivacyState(true)}
+                    >
+                        Privacy Policies
+                    </button>
+                </li>
             </ul>
         </div>
     );

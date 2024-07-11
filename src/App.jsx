@@ -8,18 +8,14 @@ import Gallery from "./Components/Gallery/Gallery";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 // import VideoPlayer from "./Components/VideoPlayer/VideoPlayer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import TermsOfUse from "./Components/TermsOfUse/TermsOfUse";
+import Privacy from "./Components/Privacy/Privacy";
 
 const App = () => {
     // const [playState, setPlayState] = useState(false);
     const [termsOfUseState, setTermsOfUseState] = useState(false);
-
-    useEffect(() => {
-        return () => {
-            console.log(termsOfUseState);
-        };
-    }, [termsOfUseState]);
+    const [privacyState, setPrivacyState] = useState(false);
 
     return (
         <div>
@@ -35,13 +31,22 @@ const App = () => {
                 {/* <Testimonials /> */}
                 <Title subTitle="Contact Us" title="Free Estimate" />
                 <Contact />
-                <Footer setTermsOfUseState={setTermsOfUseState} />
+                <Footer
+                    setTermsOfUseState={setTermsOfUseState}
+                    setPrivacyState={setPrivacyState}
+                />
             </div>
             {/* <VideoPlayer playState={playState} setPlayState={setPlayState} /> */}
             {termsOfUseState && (
                 <TermsOfUse
                     termsOfUseState={termsOfUseState}
                     setTermsOfUseState={setTermsOfUseState}
+                />
+            )}
+            {privacyState && (
+                <Privacy
+                    privacyState={privacyState}
+                    setPrivacyState={setPrivacyState}
                 />
             )}
         </div>
